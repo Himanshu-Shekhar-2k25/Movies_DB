@@ -1,0 +1,64 @@
+body {
+    background-image: url('background_walpy.jpg');
+    margin: 0;
+}
+
+h1 {
+    background: -webkit-linear-gradient(#0A4D68, #00FFCA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 450%;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    font-family: 'Bruno Ace SC', cursive;
+    font-weight:bolder;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#inner_c{
+    background-color:rgb(68, 66, 66);
+    opacity:0.8;
+    height:400px;
+    margin: auto;
+    width: 80%;
+    border:20px ridge black;
+    border-radius:50px;
+    flex-wrap: wrap;
+}
+h2{
+    font-size: 30px;
+    font-family: 'Bruno Ace SC', cursive;
+    font-weight:bolder;
+    text-align: center;
+    margin-left:0;
+    margin-right:0;
+    margin-bottom:0;
+}
+.input{
+    width:80%;
+    height:40px;
+    font-size: 30px;
+    font-family: 'Bruno Ace SC', cursive;
+    font-weight:bolder;
+    text-align: center;
+    color:black;
+    background-image: linear-gradient(red,yellow);
+    opacity:.7;
+}
+#submit{
+    display: block;
+    margin-top:40px;
+    height:50px;
+    width:55%;
+    font-size: 30px;
+    font-family: 'Bruno Ace SC', cursive;
+    font-weight:bolder;
+    text-align: center;
+    color:black;
+    background-image: linear-gradient(#0A4D68,#00FFCA);
+}
