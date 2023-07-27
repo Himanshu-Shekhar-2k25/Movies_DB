@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const http = require('http')
 const bodyParser = require('body-parser')
+const path = require('path');
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.set('view engine','ejs')
@@ -9,7 +10,8 @@ app.set('views','./views')
 
 app.get('/',function(req,res)
 {
-    res.sendFile("index.html")
+    const filePath = path.join(__dirname, 'index.html');
+    res.sendFile(filePath);
 })
 
 app.post('/',function(req,res)
