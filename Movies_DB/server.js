@@ -9,7 +9,7 @@ app.set('views','./views')
 
 app.get('/',function(req,res)
 {
-    res.sendFile("C:\\Users\\LENOVO\\Desktop\\Web Dev\\Movies_DB\\index.html")
+    res.sendFile("./index.html")
 })
 
 app.post('/',function(req,res)
