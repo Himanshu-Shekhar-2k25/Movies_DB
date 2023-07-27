@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const http = require('http')
 const bodyParser = require('body-parser')
-const notifier = require('node-notifier')
 const path = require('path')
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -30,12 +29,6 @@ app.post('/',function(req,res)
             
             if(data.Response == 'False')
             {
-                notifier.notify({
-                    title: 'ERROR - Movie Not Found !',
-                    message: 'Please try again',
-                    sound: true,
-                    wait: true
-                  })
                 const filePath = path.join(__dirname, 'index.html');
                 res.sendFile(filePath);
             }
