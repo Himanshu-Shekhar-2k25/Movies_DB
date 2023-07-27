@@ -26,8 +26,9 @@ app.post('/',function(req,res)
         response.on("data",function(data)
         {
             data = JSON.parse(data)
-                       
-            res.render('Movie',{image:data.Poster,title:data.Title,year:data.Year,release:data.Released,runtime:data.Runtime,genre:data.Genre,director:data.Director,writer:data.Writer,actors:data.Actors,plot:data.Plot,language:data.Language,country:data.Country,awards:data.Awards,ratings:data.Ratings[0].Value,imdb_ratings:data.imdbRating,boxoffice:data.BoxOffice})
+
+            const filePath = path.join(__dirname, 'Movie.ejs');
+            res.render(filePath,{image:data.Poster,title:data.Title,year:data.Year,release:data.Released,runtime:data.Runtime,genre:data.Genre,director:data.Director,writer:data.Writer,actors:data.Actors,plot:data.Plot,language:data.Language,country:data.Country,awards:data.Awards,ratings:data.Ratings[0].Value,imdb_ratings:data.imdbRating,boxoffice:data.BoxOffice})
         })
     })
 })
