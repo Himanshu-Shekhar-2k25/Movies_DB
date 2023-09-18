@@ -8,7 +8,7 @@ app.set('view engine', 'ejs')
 app.set('views', './views')
 
 app.get('/', function (req, res) {
-    res.sendFile("C:\\Users\\LENOVO\\Desktop\\Web Dev\\Movies_DB\\index.html")
+    res.sendFile("./index.html")
 })
 
 app.post('/', function (req, res) {
@@ -21,7 +21,7 @@ app.post('/', function (req, res) {
         response.on("data", function (data) {
             data = JSON.parse(data)
             if (data.Response != 'True') {
-                res.sendFile("C:\\Users\\LENOVO\\Desktop\\Web Dev\\Movies_DB\\index.html")
+                res.sendFile("./index.html")
             }
             else
                 res.render('Movie', {
