@@ -35,7 +35,24 @@ app.post('/',function(req,res)
             else    
             {
                 const filePath = path.join(__dirname, 'Movie.ejs');
-                res.render(filePath,{image:data.Poster,title:data.Title,year:data.Year,release:data.Released,runtime:data.Runtime,genre:data.Genre,director:data.Director,writer:data.Writer,actors:data.Actors,plot:data.Plot,language:data.Language,country:data.Country,awards:data.Awards,ratings:data.Ratings[0].Value,imdb_ratings:data.imdbRating,boxoffice:data.BoxOffice})
+                res.render(filePath,{
+                    image: data.Poster != null ? data.Poster : "N/A",
+                    title: data.Title != null ? data.Title : "N/A",
+                    year: data.Year != null ? data.Year : "N/A",
+                    release: data.Released != null ? data.Released : "N/A",
+                    runtime: data.Runtime != null ? data.Runtime : "N/A",
+                    genre: data.Genre != null ? data.Genre : "N/A",
+                    director: data.Director != null ? data.Director : "N/A",
+                    writer: data.Writer != null ? data.Writer : "N/A",
+                    actors: data.Actors != null ? data.Actors : "N/A",
+                    plot: data.Plot != null ? data.Plot : "N/A",
+                    language: data.Language != null ? data.Language : "N/A",
+                    country: data.Country != null ? data.Country : "N/A",
+                    awards: data.Awards != null ? data.Awards : "N/A",
+                    ratings: data.Ratings[0] != null ? data.Ratings[0].Value : "N/A",
+                    imdb_ratings: data.imdbRating != null ? data.imdbRating : "N/A",
+                    boxoffice: data.BoxOffice != null ? data.BoxOffice : "N/A"
+                })
             }
         })
     })
